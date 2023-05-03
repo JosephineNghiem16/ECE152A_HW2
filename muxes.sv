@@ -7,6 +7,7 @@ module muxes(
   
 // 2 x 1 mux
   wire s = a_i ^ b_i;
+  var y;
   always_comb begin
     if (s) begin
       y = d_i;
@@ -17,6 +18,7 @@ module muxes(
 assign y0_o = y;
   
 // 4 x 1 mux
+  var z;
   always_comb begin
     case (sel4_i)
       0: z = 0;
